@@ -22,3 +22,8 @@ export const getAllResumeApi = async () => {
 export const deleteResumeApi = async (resumeId)=>{
     return await axiosService("DELETE",`/resumes/${resumeId}`,{})
 }
+
+//update  resumes Api: called by edit componenet when the update  button clicks
+export const editAllResumeApi = async (resumeId,resumeDetails)=>{
+    return await axiosService("PUT",`/resumes/${resumeId}`,resumeDetails)
+}

@@ -18,13 +18,13 @@ function Preview({resumeDetails}) {
 
             {
               resumeDetails?.skills?.map(skill=>(
-               <span>   <Button variant='text' className='bg-dark text-light rounded' >Skill</Button></span> 
+               <span>   <Button  key={skill} variant='text' className='bg-dark text-light rounded my-2 mx-2' >{skill}</Button></span> 
                ))
             }
 
+ 
 
-
-        <span>   <Button variant='text' className='bg-dark text-light rounded' >Skill</Button></span> 
+       {/* <span>   <Button variant='text' className='bg-dark text-light rounded' >Skill</Button></span>  */}
           <Divider className='bg-dark mt-3 '/>
         <p>Bachelor's Degree in:{resumeDetails?.degree}</p>
         <p>University/college name:{resumeDetails?.collage}</p>

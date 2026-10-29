@@ -56,8 +56,8 @@ console.log(resumeDetails);
         <div>
           <h3>Personal Details</h3>
           <div className="row" p-5>
-            <TextField value={resumeDetails.fullname}  onChange={e=>setResumeDetails({...resumeDetails ,fullname:e.target.value})} id="standard-basic-fullname" label="Full name" variant="standard" />
-            <TextField value={resumeDetails.location}  onChange={e=>setResumeDetails({...resumeDetails ,location:e.target.value})} id="standard-basic-location" label="Location" variant="standard" />
+            <TextField value={resumeDetails?.fullname}  onChange={e=>setResumeDetails({...resumeDetails ,fullname:e.target.value})} id="standard-basic-fullname" label="Full name" variant="standard" />
+            <TextField value={resumeDetails?.location}  onChange={e=>setResumeDetails({...resumeDetails ,location:e.target.value})} id="standard-basic-location" label="Location" variant="standard" />
             <FormControl variant='standard'>
               <InputLabel   id="demo-simple-select-label">Choose Job Title</InputLabel>
               <Select defaultValue={""}  onChange={e=>setResumeDetails({...resumeDetails ,job:e.target.value})}
@@ -86,10 +86,10 @@ console.log(resumeDetails);
         <div>
           <h3>Contact Details</h3>
           <div className="row" p-5>
-            <TextField value={resumeDetails.email}  onChange={e=>setResumeDetails({...resumeDetails ,email:e.target.value})} id="standard-basic-email" label="email" variant="standard" />
-            <TextField value={resumeDetails.phone} onChange={e=>setResumeDetails({...resumeDetails ,phone:e.target.value})} id="standard-basic-contact" label="contact" variant="standard" />
-            <TextField value={resumeDetails.linkedin} onChange={e=>setResumeDetails({...resumeDetails ,linkedin:e.target.value})} id="standard-basic-linkedin" label="Linkedin Link" variant="standard" />
-            <TextField  value={resumeDetails.github} onChange={e=>setResumeDetails({...resumeDetails ,github:e.target.value})} id="standard-basic-github" label="Github Link" variant="standard" />
+            <TextField value={resumeDetails?.email}  onChange={e=>setResumeDetails({...resumeDetails ,email:e.target.value})} id="standard-basic-email" label="email" variant="standard" />
+            <TextField value={resumeDetails?.phone} onChange={e=>setResumeDetails({...resumeDetails ,phone:e.target.value})} id="standard-basic-contact" label="contact" variant="standard" />
+            <TextField value={resumeDetails?.linkedin} onChange={e=>setResumeDetails({...resumeDetails ,linkedin:e.target.value})} id="standard-basic-linkedin" label="Linkedin Link" variant="standard" />
+            <TextField  value={resumeDetails?.github} onChange={e=>setResumeDetails({...resumeDetails ,github:e.target.value})} id="standard-basic-github" label="Github Link" variant="standard" />
 
           </div>
         </div>
@@ -99,9 +99,9 @@ console.log(resumeDetails);
         <div>
           <h3>Educational Details</h3>
           <div className="row p-3">
-            <TextField value={resumeDetails.degree}  onChange={e=>setResumeDetails({...resumeDetails , degree:e.target.value})} id="standard-basic-degree" label="Bachelor's Degree" variant="standard" />
-            <TextField  value={resumeDetails.collage} onChange={e=>setResumeDetails({...resumeDetails , collage:e.target.value})} id="standard-basic-college" label="University/College name" variant="standard" />
-            <TextField  value={resumeDetails.year}  onChange={e=>setResumeDetails({...resumeDetails , year:e.target.value})} id="standard-basic-year" label="Year of graduation" variant="standard" />
+            <TextField value={resumeDetails?.degree}  onChange={e=>setResumeDetails({...resumeDetails , degree:e.target.value})} id="standard-basic-degree" label="Bachelor's Degree" variant="standard" />
+            <TextField  value={resumeDetails?.collage} onChange={e=>setResumeDetails({...resumeDetails , collage:e.target.value})} id="standard-basic-college" label="University/College name" variant="standard" />
+            <TextField  value={resumeDetails?.year}  onChange={e=>setResumeDetails({...resumeDetails , year:e.target.value})} id="standard-basic-year" label="Year of graduation" variant="standard" />
 
 
           </div>
@@ -121,7 +121,7 @@ console.log(resumeDetails);
   }  
 
   const generateSkillsummary = ()=> {
-    setResumeDetails({...resumeDetails,skills:jobSkills[resumeDetails.job],summary:summaries[resumeDetails.job]})
+    setResumeDetails({...resumeDetails,skills:jobSkills[resumeDetails?.job],summary:summaries[resumeDetails?.job]})
     handleNext()
   }
 
