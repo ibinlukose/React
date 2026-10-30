@@ -27,3 +27,14 @@ export const deleteResumeApi = async (resumeId)=>{
 export const editAllResumeApi = async (resumeId,resumeDetails)=>{
     return await axiosService("PUT",`/resumes/${resumeId}`,resumeDetails)
 }
+
+
+//update  resumes Api: called by edit componenet when the update  button clicks
+export const downloadAllResumeApi = async (resumeDetails)=>{
+    return await axiosService("POST",`/downlaods/`,resumeDetails)
+}
+
+//update download  resumes Api: called by download componenet when the update  button clicks
+export const getAllDownloadResumeApi = async ()=>{
+    return await axiosService("GET",`/downlaods/`,{})
+}
